@@ -18,7 +18,7 @@ class Database {
     public function connectDb(){
         $mysqli = new mysqli();
         $mysqli->connect("localhost","muceliFederica",
-        "pulcinella8499", "Pastificio");
+        "25011994Fm", "Pastificio");
         
          /*$mysqli->connect("localhost","root",
         "25011994FM", "Pastificio"); */
