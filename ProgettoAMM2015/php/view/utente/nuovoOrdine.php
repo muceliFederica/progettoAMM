@@ -51,7 +51,8 @@ default:
 	<?php } else { ?>
 		<p class="messaggio">Nessun prodotto inserito</p>
 	<?php } 
-	}?>
 	break;
+	}?>
+	
 	</div>
 	
