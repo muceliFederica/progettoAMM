@@ -3,7 +3,7 @@ include_once basename(__DIR__) . '/../model/Ordine.php';
 
 	if(!isset($_SESSION['newOrdine']))
 	{
-		?><script>window.alert("Nessun prodotto inserito");</script><?	
+		<p class="messaggio">Nessun prodotto inserito;</p>
 	}else
 	{
 		?><div class="content2"><?

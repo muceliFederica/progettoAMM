@@ -85,7 +85,7 @@ class ControlloUtente extends BaseController {
 						if(UtenteFactory::instance()->salva($user)!=0)
 						{?><p class="messaggio"> Credenziali modificate</p><?}
 						else
-						{?><p class="messaggio"> Credenziali non modificate</p><?}
+						{?><p class="messaggio"> Credenziali non modificate. User o password gia' in uso</p><?}
 
 						$this->showUtente($vd);
                         break;
