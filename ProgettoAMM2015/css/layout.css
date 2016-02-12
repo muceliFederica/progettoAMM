@@ -1,6 +1,7 @@
 #body{
     background-image: url('../immagini/sfondo.gif');
     font: 13px/20px "Times New Roman", Arial, sans-serif;
+
 	
 }
 
@@ -191,9 +192,11 @@ tr.alt-row, tr.alt-row td{
 		border: 0px ;
 		background-image: url('../immagini/sfondo.gif');
 	}
+	
 
     #pagina {
         width: 100%;
+	height:100%;
    	
     }
 
@@ -308,12 +311,7 @@ tr.alt-row, tr.alt-row td{
 		color:#3080D0;
 	}
     
-	/*.prod{
-		text-align: right;
-		font-size:15px;
-		font-weight:bold;
-		float:left;
-	}*/
+	
 	.inp
 	{
 		width:50px;
@@ -493,7 +491,7 @@ tr.alt-row, tr.alt-row td{
 	.right2 p 
 	{
 		font: 21px "Times New Roman", Arial, serif;
-		/*margin-right:140px;*/
+		
 		
         float:right;
 		font-weight:bold;
