@@ -4,7 +4,7 @@ switch ($vd->getSottoPagina()) {
 
 	case 'nuovoOrdine':
 	?><p><br><br><br></p>
-	<img title='coccoi' alt="coccoi" src="../immagini/coccoi.JPG" width="200" height="180"><?
+	<img title='coccoi' alt="coccoi" src="../immagini/coccoi.JPG" width="250" height="200"><?
 	break;
 	case 'riepilogo':
 	break;
