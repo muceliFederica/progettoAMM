@@ -7,7 +7,7 @@
 	<p>Cognome: <?= $user->getCognome() ?> </p>
 	<p>Email: <?= $user->getEmail() ?> </p>
 	<p>Telefono: <?= $user->getTelefono() ?> </p>
-	<p>Indirizzo: <?= $user->getVia() . ' n. '. $user->getCivico() ?> </p>
+	<p>Indirizzo: <?= $user->getVia() . ' n. ' . $user->getCivico() ?> </p>
 	<p>Città: <?= $user->getCitta() ?> (<?= $user->getProvincia() ?>) </p>
 	<p>Cap: <?= $user->getCap() ?> </p>
 
