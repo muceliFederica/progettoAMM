@@ -2,9 +2,9 @@
 
 switch ($vd->getSottoPagina()) {
 
-case 'nuovoOrdine':?>
+case 'nuovoOrdine':
 if (isset ($_SESSION['newOrdine']))unset($_SESSION['newOrdine']);
-<ul>
+?><ul>
     <li class="<?= $vd->getSottoPagina() == 'home' || $vd->getSottoPagina() == null ? 'current_page_item' : ''?>"><a href="index.php?page=utente<?= $vd->scriviToken('?')?>">Home</a></li>
     <li><a href="#segnalibro">Contatti</a></li>
     <li class="<?= $vd->getSottoPagina() == 'profilo' ? 'current_page_item' : '' ?>"><a href="index.php?page=utente&subpage=profilo<?= $vd->scriviToken('?')?>">Dati personali</a></li>
