@@ -50,7 +50,7 @@ if (count($prodotti) > 0) { ?>
 				<button type="submit"">Completa ordine</button>
 			</form>
 <?php } else { ?>
-    <p class="messaggio"> Nessun prodotto inserito </p>
+    <script>window.alert("Nessun prodotto inserito");</script>
 <?php } 
 break;
 }
