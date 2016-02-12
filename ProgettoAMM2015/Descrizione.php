@@ -106,12 +106,12 @@
         
         <p> <strong> Homepage</strong> </p>
         <ul>
-            <li> <a href="http://spano.sc.unica.it/amm2015/muceliFederica/ProgettoAMM/php/index.php?page=home">http://spano.sc.unica.it/amm2015/muceliFederica/ProgettoAMM/php/index.php?page=home</a></li>
+            <li> <a href="http://spano.sc.unica.it/amm2015/muceliFederica/ProgettoAMM2015/php/index.php?page=home">http://spano.sc.unica.it/amm2015/muceliFederica/ProgettoAMM2015/php/index.php?page=home</a></li>
         </ul>
         
         <p> <strong> Link alla repository </strong> </p>
         <ul>
-            <li> <a href="https://github.com/muceliFederica/amm2015"> https://github.com/muceliFederica/amm2015</a></li>
+            <li> <a href="https://github.com/muceliFederica/progettoAMM"> https://github.com/muceliFederica/progettoAMM</a></li>
         </ul>
     </body>
 </html>
