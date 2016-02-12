@@ -11,7 +11,7 @@ case 'nuovoOrdine':
     <li class="<?= $vd->getSottoPagina() == 'nuovoOrdine' ? 'current_page_item' : '' ?>"><a href="index.php?page=utente&subpage=nuovoOrdine">Nuovo ordine</a></li>
 </p>
 </ul>
-
+<?
 break;
 case 'ordini':
 if (isset ($_SESSION['newOrdine']))unset($_SESSION['newOrdine']);
