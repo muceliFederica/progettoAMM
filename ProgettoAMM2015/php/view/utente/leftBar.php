@@ -14,8 +14,9 @@ if (isset ($_SESSION['newOrdine']))unset($_SESSION['newOrdine']);
 </ul>
 <img title='culurgionis' alt="Culurgionis" src="../immagini/culurgionis3.jpeg" width="250" height="150"><?
 break;
-case 'ordini':?>
-unset($_SESSION['newOrdine']);
+case 'ordini':
+if (isset ($_SESSION['newOrdine']))unset($_SESSION['newOrdine']);
+?>
 <ul>
     <li class="<?= $vd->getSottoPagina() == 'home' || $vd->getSottoPagina() == null ? 'current_page_item' : ''?>"><a href="index.php?page=utente<?= $vd->scriviToken('?')?>">Home</a></li>
     <li><a href="#segnalibro">Contatti</a></li>
@@ -25,8 +26,9 @@ unset($_SESSION['newOrdine']);
 </ul>
 <?
 break;
-case 'riepilogo':?>
-unset($_SESSION['newOrdine']);
+case 'riepilogo':
+if (isset ($_SESSION['newOrdine']))unset($_SESSION['newOrdine']);
+?>
 <ul>
     <li class="<?= $vd->getSottoPagina() == 'home' || $vd->getSottoPagina() == null ? 'current_page_item' : ''?>"><a href="index.php?page=utente<?= $vd->scriviToken('?')?>">Home</a></li>
     <li><a href="#segnalibro">Contatti</a></li>
@@ -37,8 +39,9 @@ unset($_SESSION['newOrdine']);
 <?
 break;
 
-case 'profilo':?>
-unset($_SESSION['newOrdine']);
+case 'profilo':
+if (isset ($_SESSION['newOrdine']))unset($_SESSION['newOrdine']);
+?>
 <ul>
     <li class="<?= $vd->getSottoPagina() == 'home' || $vd->getSottoPagina() == null ? 'current_page_item' : ''?>"><a href="index.php?page=utente<?= $vd->scriviToken('?')?>">Home</a></li>
     <li><a href="#segnalibro">Contatti</a></li>
@@ -48,8 +51,9 @@ unset($_SESSION['newOrdine']);
 </ul><?
 break;
 
-case 'credenziali':?>
-unset($_SESSION['newOrdine']);
+case 'credenziali':
+if (isset ($_SESSION['newOrdine']))unset($_SESSION['newOrdine']);
+?>
 <ul>
     <li class="<?= $vd->getSottoPagina() == 'home' || $vd->getSottoPagina() == null ? 'current_page_item' : ''?>"><a href="index.php?page=utente<?= $vd->scriviToken('?')?>">Home</a></li>
     <li><a href="#segnalibro">Contatti</a></li>
