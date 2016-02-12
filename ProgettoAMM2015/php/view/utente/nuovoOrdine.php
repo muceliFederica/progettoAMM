@@ -52,7 +52,6 @@ default:
 		<p class="messaggio">Nessun prodotto inserito</p>
 	<?php } 
 	}?>
-	</div>
-	<?
 	break;
-	?>
+	</div>
+	
