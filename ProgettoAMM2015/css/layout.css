@@ -364,7 +364,9 @@ tr.alt-row, tr.alt-row td{
 
     #header, #footer{
         background-image:url('../immagini/acqua.jpg');
-        width: 100%;
+	padding-left:3%;
+	padding-right:3%;
+        width: 94%;
 	color: #f7f7f7
         
     }
