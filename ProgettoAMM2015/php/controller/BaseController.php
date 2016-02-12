@@ -30,11 +30,11 @@ class BaseController {
                         $vd->setSottoPagina('chiSiamo');
                         break;
                     case 'prodotti':
-			$prodotti = ProdottoFactory::instance()->getProdotti();
+						$prodotti = ProdottoFactory::instance()->getProdotti();
                         $vd->setSottoPagina('prodotti');
                         break;
                     case 'login':
-			$vd->setSottoPagina('login');
+						$vd->setSottoPagina('login');
                         break;
                     default:
                         $this->showHome($vd);
@@ -50,7 +50,8 @@ class BaseController {
                     $password = isset($request['password']) ? $request['password'] : '';
                     // Loggo
                     $this->login($vd, $username, $password);
-		    if($this->loggedIn()) {
+					// inizializzo l'utente
+					if($this->loggedIn()) {
                         $user = UtenteFactory::instance()->cercaUtentePerId($_SESSION[self::user], $_SESSION[self::ruolo]);
                     }
                     break;   
@@ -68,7 +69,10 @@ class BaseController {
         
      require basename(__DIR__) . '/../view/master.php';
     }
-
+	/**
+	*Mostra la pagina di login
+	*@param type $vd
+	*/
     protected function showLogin($vd) {
         $vd->setTitolo("Login ");
         $vd->setMenu(basename(__DIR__) . '/../view/home/menu.php');
@@ -89,7 +93,7 @@ class BaseController {
     }
 
     /**
-     *  Mostra la pagina deldatore
+     *  Mostra la pagina del datore
      * @param type $vd
      */
     protected function showDatore($vd) {
@@ -99,18 +103,22 @@ class BaseController {
         $vd->setRightBar(basename(__DIR__) . '/../view/datore/rightBar.php');
         $vd->setContent(basename(__DIR__) . '/../view/datore/content.php');
     }
-
+	
+	/**
+     *  Mostra la home
+     * @param type $vd
+     */
 
 	protected function showHome($vd) {
         $vd->setTitolo("Pastificio Orru' Home");
         $vd->setContent(basename(__DIR__) . '/../view/home/content.php');
-	$vd->setMenu(basename(__DIR__) . '/../view/home/menu.php');
+		$vd->setMenu(basename(__DIR__) . '/../view/home/menu.php');
         $vd->setLeftBar(basename(__DIR__) . '/../view/home/leftBar.php');
         $vd->setRightBar(basename(__DIR__) . '/../view/home/rightBar.php');
     }
     
     /**
-     *  Mostra, a seconda del ruolo, la pagina dell'utente o la pagina dell'istruttore
+     *  Mostra, a seconda del ruolo, la pagina dell'utente o la pagina del datore
      * @param type $vd
      */
     protected function showHomeUtente($vd) {

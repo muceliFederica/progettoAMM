@@ -13,26 +13,26 @@ class Ordine {
 	private $trovato;
 	private $data;
 
-
+	// un ordine e' caratterizzato da un array di prodotti e uno di quantita.
+	//All'i-esima posizione corrisponde il prodotto e la quantita del prodotto acquistato
     public function __construct() {
 
 		$this->contenuto=array();
 		$this->quantita=array();
     }
+	//Restituisce l'array contenuto
     public function getContenuto()
 	{
 		return $this->contenuto;
 	}
-    
+    //aggiunge un prodotto con la relativa quantita' ad un ordine
 	public function aggiungiProdotto($prodotto,$quantita) 
 	{
-
-		
 			$position=count($this->contenuto);
 			$trovato=0;
 			for ($i=0;$i<count($this->contenuto);$i++)
 			{
-			//Verifico se il prodotto è presente nel carrello
+			//Verifico se il prodotto è presente nell'ordine
 				if ($this->contenuto[$i]==$prodotto)
 					 $trovato=1;
 			}
@@ -43,13 +43,13 @@ class Ordine {
 				$this->update($prodotto,$quantita);
 			}
 			else {
-				//altrimenti aggiungo il prodotto al carrello
+				//altrimenti aggiungo il prodotto all'ordine
 				$this->contenuto[$position]=$prodotto;
 				$this->quantita[$position]=$quantita;
 			}
 		
     }
-
+	//aggiorno la quantita del prodotto nell'ordine
 	public function update($contenuto,$quantita) {
 
 		$position = -1;
@@ -69,26 +69,7 @@ class Ordine {
 
 	}
 
-	/*public function rimuoviProdotto($prodotto1) 
-	{
-        $pos = $this->posizione($prodotto1);
-        if ($pos > -1) 
-		{
-            array_splice($this->contenuto, $pos, 1);
-			array_splice($this->quantita, $pos, 1);
-            return true;
-        }
-	        return false;
-    }*/
-
-
-
-	/*public function contenutoValido() 
-	{
-        return count($this->contenuto) > 0;
-    }*/
-
-    
+	//restituisce la posizione del prodotto nell'array contenuto. Restituisce -1 se non e' presente
     private function posizione($prodotto1) 
 	{
         for ($i = 0; $i < count($this->contenuto); $i++)
@@ -102,7 +83,7 @@ class Ordine {
     }
 
     /**
-     * Restituisce il codice del corso
+     * Restituisce il codice dell'ordine
      * @return type
      */
     public function getCodice() 
@@ -111,13 +92,17 @@ class Ordine {
     }
     
     /**
-     * Setta il codice del corso
+     * Setta il codice dell'ordine
      * @param type $codice
      */
     public function setCodice($codice) 
 	{
         $this->codice = $codice;
     }
+	/**
+     * Restituisce la data di consegna
+     * @return type
+     */
 
 	public function getData() 
 	{
@@ -125,8 +110,8 @@ class Ordine {
     }
     
     /**
-     * Setta il codice del corso
-     * @param type $codice
+     * Setta la data di consegna
+     * @param type $$data
      */
     public function setData($data) 
 	{
@@ -134,7 +119,7 @@ class Ordine {
     }
     
     /**
-     * Restituisce il nome del corso
+     * Restituisce il prezzo dell'ordine
      * @return type
      */
     public function getPrezzo() 
@@ -143,31 +128,35 @@ class Ordine {
     }
     
     /**
-     * Setta il nome del corso
-     * @param type $nome
+     * Setta prezzo dell'ordine
+     * @param type $prezzo
      */
     public function setPrezzo($prezzo) 
 	{
         $this->prezzo = $prezzo;
     }
-    
-    
 
-	
     /**
-     * Setta l'utente come iscritto al corso
+     * Setta l'utente che ha effettuato l'ordine
      * @param Utente $utente
      */
     public function setUtente($utente) 
 	{
         $this->utente = $utente;
     }
-
+	/**
+     * Restituisce l'utente che ha effettuato l'ordine
+     * @return type
+     */
+	
 	public function getUtente() 
 	{
         return $this->utente;
     }
-    
+    /**
+     * Restituisce la quantita di un prodotto in un'ordine
+     * @param $prodotto
+     */
 	public function getQuantita($prodotto) 
 	{
 		$position = -1;
@@ -185,7 +174,7 @@ class Ordine {
 		echo "Impossibile aggiornare il prodotto,
 			prodotto non trovato!<br><br>";
 	}
-
+	//Stampo il contenuto dell'ordine
 	public function StampaCarrello() {
 		$somma=0;
 		if (count($this->contenuto) > 0) 
@@ -220,18 +209,13 @@ class Ordine {
 						<input type="date" name="date" value="2000-01-01"/>
 						<button type="submit">Conferma ordine </button>
     			</form>
-			
 
-			
 	<?php } 
 	else 
 		{ 
 			?><p class="messaggio"> Nessun prodotto inserito </p><?
 		} 
 	}
-
-	
-
 }
 
 ?>

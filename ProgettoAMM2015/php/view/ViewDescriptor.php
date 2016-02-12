@@ -140,15 +140,7 @@ class ViewDescriptor {
     public function setPagina($pagina) {
         $this->pagina = $pagina;
     }
-    
-    /**
-     * Aggiungo uno script
-     * @param type $nome
-     */
-    public function addScript($nome){
-        $this->js[] = $nome;
-    }
-    
+
     /**
      * Restituisco gli scripts
      * @return type

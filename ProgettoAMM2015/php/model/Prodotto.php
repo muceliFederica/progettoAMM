@@ -10,32 +10,25 @@ class Prodotto {
     public function __construct() {
         
     }
-    
     /**
-     * Restituisce il giorno in cui si tiene l'edizione del corso
+     * Restituisce il nome del prodotto
      * @return type
      */
-    /*public function equals(Prodotto $prodotto)
-	{
-		if($this->getNome()==$prodotto->getNome())
-			return true;
-		else 
-			return false;
-	}*/
+    
     public function getNome() {
         return $this->nome;
     }
     
     /**
-     * Setta il giorno dell'edizione del corso
-     * @param type $giorno
+     * Setta il nome del prodotto
+     * @param type $nome
      */
     public function setNome($nome) {
         $this->nome = $nome;
     }
     
     /**
-     * Restituisce il numero dell'edizione
+     * Restituisce la descrizione del prodotto
      * @return type
      */
     public function getDescrizione() {
@@ -43,15 +36,15 @@ class Prodotto {
     }
     
     /**
-     * Setta il numero dell'edizione
-     * @param type $numero
+     * Setta la descrizione del prodotto
+     * @param type $descrizione
      */
     public function setDescrizione($descrizione) {
         $this->descrizione = $descrizione;
     }
        
     /**
-     * Restituisce il prezzo del'edizione del corso
+     * Restituisce il prezzo del prodotto
      * @return type
      */
     public function getPrezzo() {
@@ -59,15 +52,13 @@ class Prodotto {
     }
     
     /**
-     * Setta il prezzo dell'edizione del corso
+     * Setta il prezzo del prezzo
      * @param type $prezzo
      */
     public function setPrezzo($prezzo) {
         $this->prezzo = $prezzo;
     }
-
-	
-   
+  
 }
 
 ?>

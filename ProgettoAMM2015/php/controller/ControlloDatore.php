@@ -6,10 +6,6 @@ include_once basename(__DIR__) . '/../model/ProdottoFactory.php';
 include_once basename(__DIR__) . '/../model/Ordine.php';
 
 class ControlloDatore extends BaseController {
-
-	
-	
-
     public function __construct() {
         parent::__construct();
     }
@@ -34,29 +30,31 @@ class ControlloDatore extends BaseController {
                 // inizio switch subpage
                 switch ($request["subpage"]) {
                     
-                    // profilo dell'utente
+                    // profilo del datore
                     case 'profilo':
                         $vd->setSottoPagina('profilo');
                         break;
+					//pagina per modificare un prodotto
 					case 'modificaProdotto':
                         $vd->setSottoPagina('modificaProdotto');
                         break;
-
+					//pagina per inserire un nuovo prodotto
 					case 'inserisciProdotto':
                         $vd->setSottoPagina('inserisciProdotto');
                         break;
-
+					//pagina di gestione dei prodotti
 					case 'gestioneProdotti':
 						$prodotti = ProdottoFactory::instance()->getProdotti();
                         $vd->setSottoPagina('gestioneProdotti');
 						break;
-                   
+					//pagina per modificare le credenziali del datore
                     case 'credenziali':
 						$vd->setSottoPagina('credenziali');
 						?><script src="../Ajax/jquery-2.1.4.min.js"></script><?
-						
+						//aggiungo lo script javascript per validare i campi
 						?><script src="../Ajax/validazione.js"></script><?
 						break;
+					//pagina che mostra il riepilogo mensile
                     case 'riepilogoMensile':                      
                         $vd->setSottoPagina('riepilogoMensile');
                         break;
@@ -66,20 +64,20 @@ class ControlloDatore extends BaseController {
 						$ordini= OrdineFactory::instance()->getOrdiniFiltrati($mese,$anno);
 						$vd->setSottoPagina('riassuntoMensile');
 						break;
+					//pagina che mostra gli ordini del mese selezionato
 					case 'ordiniPerMese':
 						$mese=isset($request['mese']) ? $request['mese'] : '';
 						$anno=isset($request['anno']) ? $request['anno'] : '';
 						$ordini= OrdineFactory::instance()->getOrdiniFiltrati($mese,$anno);
 						$vd->setSottoPagina('ordiniPerMese');
 						break;
-
+					//pagina che mostra gli ordini ancora da consegnare. La data di consegna e' successiva rispetto alla data attuale
                     case 'ordini':
                         $ordini = OrdineFactory::instance()->getOrdiniDaConsegnare();
                         $vd->setSottoPagina('ordini');
                         break;
                     
                     default:
-						
                         $this->showDatore($vd);
                         break;
                 } // fine switch subpage
@@ -91,7 +89,7 @@ class ControlloDatore extends BaseController {
                     case 'logout':
                         $this->logout($vd);
                         break;
-
+					//modifico le credenziali
                     case 'credenziali':
 						$user = UtenteFactory::instance()->cercaUtentePerId($_SESSION[BaseController::user], $_SESSION[BaseController::ruolo]);
 						$username = isset($request['username']) ? $request['username'] : '';
@@ -99,7 +97,7 @@ class ControlloDatore extends BaseController {
                     	$password2 = isset($request['password2']) ? $request['password2'] : '';
 						$user->setUser($username);
 						$user->setPassword($password1);
-
+						//aggiorno il database
 						if(UtenteFactory::instance()->salva($user)!=0)
 						{?><p class="messaggio"> Credenziali modificate</p><?}
 						else
@@ -108,7 +106,7 @@ class ControlloDatore extends BaseController {
                         break;
 
 				case 'salvaProdotto':
-						
+						//salvo le modifiche effettuate su un prodotto
 						$prezzo=isset($request['prezzo']) ? $request['prezzo'] : '';
 						$descrizione=isset($request['descrizione']) ? $request['descrizione'] : '';
 						$nome=isset($request['prodotto']) ? $request['prodotto'] : '';
@@ -119,16 +117,17 @@ class ControlloDatore extends BaseController {
 						$this->showDatore($vd);
 						break;
 				case 'annulla':
-						
-                        			$this->showDatore($vd);
+						$this->showDatore($vd);
 						break;
 				case 'eliminaProdotto':
+						//elimino un prodotto dal database
 						$nome=isset($request['prodotto']) ? $request['prodotto'] : '';
 						ProdottoFactory::instance()->elimina($nome);
 						$this->showDatore($vd);
 						break;
 				
 				case 'inserisciProdotto':
+						//inserisco un nuovo prodotto nel database
 						$prezzo=isset($request['prezzo']) ? $request['prezzo'] : '';
 						$descrizione=isset($request['descrizione']) ? $request['descrizione'] : '';
 						$nome=isset($request['nome']) ? $request['nome'] : '';
@@ -148,10 +147,9 @@ class ControlloDatore extends BaseController {
     }
 
 
-private function getProdottoPerId(&$prodotti,&$request)
+/*private function getProdottoPerId(&$prodotti,&$request)
 {
-
-                   
+    
             if (isset($request['prodotto'])) {
             	// indice per prodotto definito, verifichiamo che sia un intero
             	$intVal = filter_var($request['prodotto'], FILTER_VALIDATE_INT, FILTER_NULL_ON_FAILURE);
@@ -160,7 +158,7 @@ private function getProdottoPerId(&$prodotti,&$request)
 				}
 			}
         
-}
+}*/
 
   
 }

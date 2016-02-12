@@ -12,7 +12,7 @@
 	<p><strong>Cap:</strong> <?= $user->getCap() ?> </p>
 
 	
-	<form method="post" action="index.php?page=datore&subpage=credenziali<?= $vd->scriviToken('?') ?>">
+	<form method="post" action="index.php?page=datore&subpage=credenziali">
 			<button type="submit"">Modifica credenziali</button>
 	</form>
 </div>

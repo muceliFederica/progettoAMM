@@ -7,10 +7,10 @@ include_once basename(__DIR__) . '/../model/Ordine.php';
 	}else
 	{
 		?><div class="content2"><?
-		$_SESSION['newOrdine']->StampaCarrello();
-		?><form method="post" action="index.php?page=utente&subpage=nuovoOrdine&cmd=modificaOrdine<?= $vd->scriviToken('?')?>">
-			<button type="submit"">Modifica ordine</button>
-		</form>
+			$_SESSION['newOrdine']->StampaCarrello();
+			?><form method="post" action="index.php?page=utente&subpage=nuovoOrdine&cmd=modificaOrdine">
+				<button type="submit">Modifica ordine</button>
+			</form>
 		</div><?
 	
 	}

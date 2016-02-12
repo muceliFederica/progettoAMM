@@ -39,7 +39,7 @@ const Datore=2;
     }
 
     /**
-     * Restituisce l'username dell'utente/istruttore
+     * Restituisce l'username dell'utente
      * @return type
      */
     public function getUser() {
@@ -47,7 +47,7 @@ const Datore=2;
     }
     
     /**
-     * Setta l'username dell'utente/istruttore
+     * Setta l'username dell'utente
      * @param type $username
      * @return boolean
      */
@@ -58,70 +58,107 @@ const Datore=2;
         $this->User = $username;
         return true;
     }
+	/**
+     * Restituisce l'id dell'utente
+     * @return type
+     */
 	
 	public function getId() {
         return $this->id;
     }
     
     /**
-     * Setta l'username dell'utente/istruttore
-     * @param type $username
-     * @return boolean
+     * Restituisce l'email dell'utente
+     * @return type
      */
-  
-	
 	public function getEmail() {
         return $this->Email;
     }
 
    /**
-    * Setta il numero di telefono del'utente
-    * @param type $telefono
+    * Setta l'email dell'utente
+    * @param type $temail
     */
     public function setEmail($email) {
         $this->Email = $email;           
     }
 	
 	/**
-     * Restituisce il numero di telefono dell'utente
+     * Restituisce cap dell'utente
      * @return type
      */
 	 
 	public function getCap() {
         return $this->Cap;
     }
+	/**
+    * Setta il cap dell'utente
+    * @param type $cap
+    */
 	
 	public function setCap($cap) {
         $this->Cap = $cap;           
     }
+	/**
+     * Restituisce la provincia dell'utente
+     * @return type
+     */
 	 
 	public function getProvincia() {
         return $this->Provincia;
     }
+	/**
+    * Setta la provincia dell'utente
+    * @param type $provincia
+    */
+	
 	
 	public function setProvincia($provincia) {
         $this->Provincia = $provincia;           
     }
+	/**
+     * Restituisce la citta dell'utente
+     * @return type
+     */
 	 
 	 public function getCitta() {
         return $this->Citta;
     }
+	/**
+    * Setta la citta dell'utente
+    * @param type $citta
+    */
 	
 	public function setCitta($citta) {
         $this->Citta = $citta;           
     }
-	
+	/**
+     * Restituisce la via dell'utente
+     * @return type
+     */
     public function getVia() {
         return $this->Via;
     }
+	/**
+    * Setta la via dell'utente
+    * @param type $via
+    */
 	
 	public function setVia($via) {
         $this->Via = $via;           
     }
+	/**
+     * Restituisce il numero civico dell'utente
+     * @return type
+     */
 	
 	public function getCivico() {
         return $this->Civico;
     }
+	/**
+    * Setta il numero civico dell'utente
+    * @param type $civico
+    */
 	
 	public function setCivico($civico) {
         $this->Civico = $civico;           
@@ -142,7 +179,7 @@ const Datore=2;
     }
     
     /**
-     * Restituisce la password dell' utente/istruttore
+     * Restituisce la password dell' utente
      * @return type
      */
     public function getPassword() {
@@ -150,7 +187,7 @@ const Datore=2;
     }
     
     /**
-     * Setta la password dell'utente/istruttore
+     * Setta la password dell'utente
      * @param type $password
      * @return boolean
      */
@@ -160,7 +197,7 @@ const Datore=2;
     }
     
     /**
-     * Restituisce il nome dell'utente/istruttore
+     * Restituisce il nome dell'utente
      * @return type
      */
     public function getNome() {
@@ -168,7 +205,7 @@ const Datore=2;
     }
     
     /**
-     * Setta il nome dell'utente/istruttore
+     * Setta il nome dell'utente
      * @param type $nome
      * @return boolean
      */
@@ -178,7 +215,7 @@ const Datore=2;
     }
     
     /**
-     * Restituisce il cognome dell'utente/istruttore
+     * Restituisce il cognome dell'utente
      * @return type
      */
     public function getCognome() {
@@ -186,7 +223,7 @@ const Datore=2;
     }
     
     /**
-     * Setta il cognome dell'utente/istruttore
+     * Setta il cognome dell'utente
      * @param type $cognome
      * @return boolean
      */
@@ -196,7 +233,7 @@ const Datore=2;
     }
     
     /**
-     * Restituisce il ruolo "utente" o "istruttore"
+     * Restituisce il ruolo utente
      * @return type
      */
     public function getRuolo() {
@@ -218,7 +255,11 @@ const Datore=2;
                 return false;
         }
     }
-    
+     /**
+     * Setta il ruolo id dell'utente
+     * @param type $id
+     * @return $valore
+     */
 
     
     
@@ -231,20 +272,12 @@ const Datore=2;
     }
     
      /**
-     * Controlla se utente/istruttore esiste
+     * Controlla se utente esiste
      * @return type
      */
     public function esiste() {
         return isset($this->Ruolo);
     }
-    
-    /*public function equals(User $user) {
-
-        return  $this->id == $user->id &&
-                $this->Nome == $user->Nome &&
-                $this->Cognome == $user->Cognome &&
-                $this->Ruolo == $user->Ruolo;
-    }*/
 
 }
 

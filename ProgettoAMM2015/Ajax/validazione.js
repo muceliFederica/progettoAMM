@@ -1,7 +1,7 @@
 
 $("document").ready(function() {
-
-				
+			
+			
                 $(".check2").bind("click",function(){
 				var username = $("#username").val();
         		var password1 = $("#password1").val();

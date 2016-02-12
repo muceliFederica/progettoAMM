@@ -1,7 +1,7 @@
 <div class="content2">
 <div class="input-form">
     <h3>Inserisci mese e anno d'interesse</h3>
-    <form method="post" action="index.php?page=datore&subpage=riassuntoMensile<?= $vd->scriviToken('?')?>">
+    <form method="post" action="index.php?page=datore&subpage=riassuntoMensile">
 	
 			<label for="mese"><strong>Mese:</strong></label>
                <select name="mese">
@@ -22,7 +22,6 @@
                <label for="anno"><strong>Anno:</strong></label>
                <input type="anno" name="anno" id="anno" value="2015"/>
                <br/>
-		
                <button  type="submit">Filtra</button>
     </form>
 </div>

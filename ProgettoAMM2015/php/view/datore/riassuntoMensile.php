@@ -12,7 +12,7 @@ if (count($ordini) > 0) { ?>
 	}?>
 	<p>Numero ordini completati nel mese  <?=$mese .' ' . $anno?> :<strong> <?=count($ordini)?></strong></p>
 	<p>Ricavo mensile :<strong> <?=$somma?> Euro</strong></p>
-	<form method="post" action="index.php?page=datore&subpage=ordiniPerMese&mese=<?=$mese ?>&anno=<?=$anno?><?= $vd->scriviToken('?')?>">
+	<form method="post" action="index.php?page=datore&subpage=ordiniPerMese&mese=<?=$mese ?>&anno=<?=$anno?>">
 				<button type="submit"">Mostra dettagli</button>
 	</form><?
  } else { ?>

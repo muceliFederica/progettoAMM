@@ -3,6 +3,7 @@ switch ($vd->getSottoPagina()) {
     case 'profilo':
         include_once 'profilo.php';
         break;
+		
     case 'ordini':
         include_once 'ordini.php';
         break;
@@ -17,17 +18,14 @@ switch ($vd->getSottoPagina()) {
 	case 'riepilogo':
         include_once 'riepilogo.php';
         break;
-
-	
-
     default:
         
-        ?>
-       <div class="home">
-       <ul >
-            <li class="home1"><a href="index.php?page=utente&subpage=profilo<?= $vd->scriviToken('?')?>">Dati personali</a></li>
-            <li class="home2"><a href="index.php?page=utente&subpage=ordini<?= $vd->scriviToken('?')?>">Ordini completati</a></li>
-            <li class="home3"><a href="index.php?page=utente&subpage=nuovoOrdine<?= $vd->scriviToken('?')?>">Nuovo ordine</a></li> 
+    ?>
+    <div class="home">
+    <ul >
+            <li class="home1"><a href="index.php?page=utente&subpage=profilo">Dati personali</a></li>
+            <li class="home2"><a href="index.php?page=utente&subpage=ordini">Ordini completati</a></li>
+            <li class="home3"><a href="index.php?page=utente&subpage=nuovoOrdine">Nuovo ordine</a></li> 
 	</ul>
 	<img id="culurgionis" title='culurgionis' alt="culurgionis" src="../immagini/culurgionis2.jpeg" width="350" height="255">
 	<div class=right2>

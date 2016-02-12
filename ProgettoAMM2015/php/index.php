@@ -14,15 +14,8 @@
         if (isset($request["page"])) {
 
             switch ($request["page"]) {
-		case "home":
-                    // gestisce il controllo principale
-                    $controllo = new BaseController();
-                    $controllo->invoke($request);
-                    break;
-
-                // se siamo nella pagina di login
-                case "login":
-                    // gestisce il controllo principale
+				case "home":
+                    // gestisce il controllo principale. Le operazioni eseguibili da tutti.
                     $controllo = new BaseController();
                     $controllo->invoke($request);
                     break;

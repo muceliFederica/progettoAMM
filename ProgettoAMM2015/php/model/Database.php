@@ -14,7 +14,7 @@ class Database {
         
         return self::$singleton;
     }
-    
+    //funzione che permette di connettersi al database
     public function connectDb(){
         $mysqli = new mysqli();
         $mysqli->connect("localhost","muceliFederica",

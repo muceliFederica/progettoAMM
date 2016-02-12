@@ -12,8 +12,6 @@ class UtenteFactory {
     private function __constructor() {
         
     }
-
-  
     public static function instance() {
         if (!isset(self::$singleton)) {
             self::$singleton = new UtenteFactory();
@@ -22,7 +20,7 @@ class UtenteFactory {
         return self::$singleton;
     }
 	
-
+	//Restituisce un utente dato l'id e il ruolo
     public function cercaUtentePerId($id, $ruolo) {
         
         $intval = filter_var($id, FILTER_VALIDATE_INT, FILTER_NULL_ON_FAILURE);
@@ -275,7 +273,7 @@ class UtenteFactory {
             return $datore;
         }
     }
-    
+    //crea l'utente
     public function creaUtente($row) {
          
         $utente = new Utente();
@@ -296,7 +294,7 @@ class UtenteFactory {
         
         return $utente;
     }
-    
+    //crea il datore
     public function creaDatore($row) {
         
         $datore = new Datore();
@@ -317,7 +315,7 @@ class UtenteFactory {
         
         return $datore;
     }
-
+	//Salva un'utente controllando che sia un utente o un datore
     public function salva(User $user) {
         
         $mysqli = Database::getInstance()->connectDb();

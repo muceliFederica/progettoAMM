@@ -9,7 +9,6 @@ class Datore extends User {
         parent::__construct();
         $this->setRuolo(User::Datore);
     }
-    
 
 }
 

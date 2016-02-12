@@ -9,7 +9,6 @@ class ProdottoFactory {
         
     }
 
-   
     public static function instance() {
         if (!isset(self::$singleton)) {
             self::$singleton = new ProdottoFactory();
@@ -17,8 +16,7 @@ class ProdottoFactory {
 
         return self::$singleton;
     }
-
-    
+	//crea il prodotto
     public function crea($row) {
         
         $prodotto = new Prodotto();
@@ -27,8 +25,8 @@ class ProdottoFactory {
         $prodotto->setDescrizione($row['Descrizione']);
         return $prodotto;
     }
-	
-public function getProdotti(){
+	//Restituisce i prodotti memorizzati nel database
+	public function getProdotti(){
 	$prodotti = array();
         $query = "select nome,prezzo,descrizione from Prodotti";
         
@@ -51,6 +49,7 @@ public function getProdotti(){
 		$mysqli->close();
         return $prodotti;
 	}
+	//Restituisce il prodotto dato il nome
 	public function getProdottoPerNome($nome){
 		
 		$prodotti=ProdottoFactory::instance()->getProdotti();
@@ -62,6 +61,7 @@ public function getProdotti(){
 		return $null;
 		
 	}
+	
 	private function &caricaProdotti(mysqli_stmt $stmt){
        	
          if (!$stmt->execute()) {
@@ -87,7 +87,7 @@ public function getProdotti(){
         }
         return $prodotti;
     }
-
+	//Salva nel database le modifiche effettuate su un prodotto
 	public function salvaModifiche($prodotto)
 	{
 		$query="Update Prodotti set Prezzo=?,Descrizione=? where Nome=?";
@@ -119,7 +119,7 @@ public function getProdotti(){
 		$mysqli->close();
 		return 0;
 	}
-
+	//Inserisce nel database un prodotto 
 	public function inserisciProdotto($nome,$prezzo,$descrizione)
 	{
 		$query="Insert into Prodotti (Nome,Prezzo,Descrizione) values (?,?,?)";
@@ -151,7 +151,7 @@ public function getProdotti(){
 		$mysqli->close();
 		return 0;
 	}
-
+	//Rimuove dal database un prodotto dato il nome
 	public function elimina($nome)
 	{
 		$query="Delete from Prodotti where Nome=?";

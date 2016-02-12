@@ -14,7 +14,8 @@ case 'nuovoOrdine':
 <?
 break;
 case 'ordini':
-if (isset ($_SESSION['newOrdine']))unset($_SESSION['newOrdine']);
+if (isset ($_SESSION['newOrdine']))
+	unset($_SESSION['newOrdine']);
 ?>
 <ul>
     <li class="<?= $vd->getSottoPagina() == 'home' || $vd->getSottoPagina() == null ? 'current_page_item' : ''?>"><a href="index.php?page=utente">Home</a></li>
@@ -37,7 +38,8 @@ case 'riepilogo':?>
 break;
 
 case 'profilo':
-if (isset ($_SESSION['newOrdine']))unset($_SESSION['newOrdine']);
+if (isset ($_SESSION['newOrdine']))
+	unset($_SESSION['newOrdine']);
 ?>
 <ul>
     <li class="<?= $vd->getSottoPagina() == 'home' || $vd->getSottoPagina() == null ? 'current_page_item' : ''?>"><a href="index.php?page=utente">Home</a></li>
@@ -49,7 +51,8 @@ if (isset ($_SESSION['newOrdine']))unset($_SESSION['newOrdine']);
 break;
 
 case 'credenziali':
-if (isset ($_SESSION['newOrdine']))unset($_SESSION['newOrdine']);
+if (isset ($_SESSION['newOrdine']))
+	unset($_SESSION['newOrdine']);
 ?>
 <ul>
     <li class="<?= $vd->getSottoPagina() == 'home' || $vd->getSottoPagina() == null ? 'current_page_item' : ''?>"><a href="index.php?page=utente">Home</a></li>
