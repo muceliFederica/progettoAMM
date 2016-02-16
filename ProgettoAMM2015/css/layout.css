@@ -36,6 +36,8 @@ p.messaggio {
     width: 100%;
 	text-align: center;
 	height:5%;
+	padding-bottom:2px;
+	
 }
 
 #footer p.contatti {
