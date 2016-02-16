@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Creato il: Feb 12, 2016 alle 17:27
+-- Creato il: Feb 16, 2016 alle 18:26
 -- Versione del server: 5.6.27-0ubuntu1
 -- Versione PHP: 5.6.11-1ubuntu3.1
 
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `Ordini` (
   `Utente` int(10) NOT NULL,
   `Prezzo` decimal(10,2) NOT NULL,
   `Data` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -90,8 +90,7 @@ CREATE TABLE IF NOT EXISTS `Prodotti` (
 --
 
 INSERT INTO `Prodotti` (`Nome`, `Prezzo`, `Descrizione`) VALUES
-('Coccoi de cipudda', '10.00', 'Ingredienti:farina, formaggio salato,pecorino, cipolla, zucchine, zucca, pomodoro, sale, olio extra vergine d''oliva.'),
-('Coccoi prena', '15.00', 'Ingredienti sfoglia:farina 00, acqua, strutto,sale.Ingredienti ripieno:patate, olio extravergine d''oliva,pecorino, formaggio salato,aglio e menta.'),
+('Coccoi prena', '14.50', 'Ingredienti sfoglia:farina 00, acqua, strutto,sale.Ingredienti ripieno:patate, olio extravergine d''oliva,pecorino, formaggio salato,aglio e menta.'),
 ('Culurgionis', '12.00', 'Ingredienti sfoglia:farina 00, acqua, strutto,sale.Ingredienti ripieno:patate, olio extravergine d''oliva,pecorino, formaggio salato,aglio e menta.'),
 ('Sebadas', '10.00', 'Ingredienti sfoglia:farina,acqua, strutto, zucchero. \r\nIngredienti ripieno: formaggio, zucchero, semola, scorza e succo di limone');
 
@@ -180,7 +179,7 @@ ALTER TABLE `Datori`
 -- AUTO_INCREMENT per la tabella `Ordini`
 --
 ALTER TABLE `Ordini`
-  MODIFY `Cod` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `Cod` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
