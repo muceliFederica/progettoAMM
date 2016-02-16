@@ -4,8 +4,6 @@
 	width: 100%;
 	height:100%;
 	overflow:scroll;
-
-	
 }
 
 #pagina{
@@ -137,7 +135,7 @@ input[type=submit]:hover, button:hover{
 }
 
 li{
-		list-style: none;	
+	list-style: none;	
 }
 
 
@@ -364,7 +362,7 @@ tr.alt-row, tr.alt-row td{
     
     #header{
         clear: both;
-        height: 250px;
+        height: 5%;
     }
 
     #header, #footer{

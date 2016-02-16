@@ -10,7 +10,8 @@
         <ul>
             <li><h2><strong> Descrizione dell'applicazione </strong></h2></li>
         </ul>
-        <p> L'applicazione gestisce prodotti offerti da un pastificio alla propria clientela.<br>
+        <p> 
+		L'applicazione gestisce prodotti offerti da un pastificio alla propria clientela.<br>
             I prodotti si caratterizzano per: <br>
         </p>
             <ol>
@@ -35,14 +36,14 @@
             <ol>
                 <li>Accedere al profilo e modificare le proprie credenziali</li>
                 <li>Visualizzare tutti gli ordini conclusi dall'utente</li>
-                <li>Effettuare un nuovo ordini. Viene visualizzato un elenco dei prodotti. L'utente puo' specificare la quantita' del prodotto 
-					desiderato e aggiungerlo al carrello. Il cliente puo' continuare ad aggiungere prodotti al proprio carrello fin quando decide il 
-					concludere l'ordine. Verra' allora mostrato un riepilogo dell'ordine, il totale dell'ordine e sara' richiesto di inserire la data di
-					consegna desiderata. Per l'implementazione del carrello viene utilizzata una variabile di sessione.</li>
+                <li>Effettuare un nuovo ordine. Viene visualizzato un elenco dei prodotti. L'utente puo' specificare la quantita' del prodotto 
+		desiderato e aggiungerlo al carrello. Il cliente puo' continuare ad aggiungere prodotti al proprio carrello fin quando decide di
+		concludere l'ordine. Verra' allora mostrato un riepilogo dell'ordine, il totale dell'ordine e sara' richiesto di inserire la data di
+		consegna desiderata. Per l'implementazione del carrello viene utilizzata una variabile di sessione.</li>
             </ol>
         
         <p>
-            Il ruolo <b>datore</b> rappresenta un datore di lavoro che che gestisce il pastificio.
+            Il ruolo <b>datore</b> rappresenta un datore di lavoro che gestisce il pastificio.
             Una volta autenticato con ruolo datore (nella pagina di login) è possibile:<br>
         </p>
         
@@ -57,13 +58,13 @@
         
         <br>
         <p>
-            L'applicazione consente di passare da un ruolo all'altro attraverso <b> logout </b> e sucessivo 
+            L'applicazione consente di passare da un ruolo all'altro attraverso <b> logout </b> e successivo 
             <b> login</b>.
         </p>
         <br>
         
         <ul>
-            <li><h2><strong> Elenco di quali requisiti soddisfatti </strong></h2></li>
+            <li><h2><strong> Elenco dei requisiti  soddisfatti </strong></h2></li>
         </ul>
         
             <ol>
@@ -73,7 +74,7 @@
                 <li>Due ruoli (come già detto in precedenza, ruolo utente e ruolo datore)</li>
                 <li>Una transazione (con piu' query tra autocommit(); e commit(); la transazione è implementata 
                     nella classe php/model/OrdineFactory.php all'interno della funzione <b>salva().
-					Un ordine viene aggiunto al database solamente se vengono aggiunti correttamente tutti gli ingredienti contenuti nell'ordine </b>;</li>
+		Un ordine viene aggiunto al database solamente se vengono aggiunti correttamente tutti gli ingredienti contenuti nell'ordine </b>;</li>
                 <li>Una funzionalità ajax (vedere Ajax/validazione.js </li>
             </ol>
         
@@ -82,7 +83,7 @@
             username quando uno dei due ruoli decide di modificare le credenziali. In particolare:
             viene mostrato un focus che si modifica a seconda del campo del form in cui ci si trova. 
 			Inoltre al click sul tasto submit vengono validati i campi: non vengono accettati valori nulli e le due password devono coincidere.
-			Se qualche criterio non viene rispettato viene mostrata una finistra che mostra l'errore senza chela pagina venga ricaricata.
+			Se qualche criterio non viene rispettato viene mostrata una finestra che mostra l'errore senza che la pagina venga ricaricata.
         </p>
         <br>
         
