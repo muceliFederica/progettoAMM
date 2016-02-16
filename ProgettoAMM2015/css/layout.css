@@ -362,7 +362,7 @@ tr.alt-row, tr.alt-row td{
     
     #header{
         clear: both;
-        height: 5%;
+        height: 125px;
     }
 
     #header, #footer{
