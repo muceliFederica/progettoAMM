@@ -1,11 +1,17 @@
 #body{
     background-image: url('../immagini/sfondo.gif');
     font: 13px/20px "Times New Roman", Arial, sans-serif;
+	width: 100%;
+	height:100%;
+	overflow:scroll;
 
 	
 }
 
 #pagina{
+	width: 100%;
+	height:100%;
+	overflow:scroll;
    	
 }
 
@@ -196,7 +202,8 @@ tr.alt-row, tr.alt-row td{
 
     #pagina {
         width: 100%;
-	
+	height:100%;
+	overflow:scroll;
    	
     }
 	
